@@ -1,0 +1,232 @@
+.middle {
+  width: 1160px;
+  padding: 20px 20px 200px 20px;
+  margin: 0 auto;
+  .confirm_order {
+    h5 {
+      font-size: 22px;
+      color: #000;
+      font-family: 微软雅黑;
+      line-height: 62px;
+      + p {
+        display: inline-block;
+        font-size: 18px;
+        color: #000;
+        line-height: 40px;
+        background-color: #e8e8e8;
+        width: 100%;
+        text-indent: 56px;
+      }
+    }
+    & > div {
+      width: 1120px;
+      border: 1px solid #d2d2d2;
+      overflow: hidden;
+      padding: 30px 20px;
+      margin-top: 30px;
+      /*收货人的地址信息*/
+      font-size: 12px;
+      color: #414141;
+      font-family: 微软雅黑;
+      div:not(:last-child) {
+        width: 272px;
+        height: 175px;
+        float: left;
+        margin-right: 10px;
+        cursor: pointer;
+        background: url("../img/confirm_order02.png") no-repeat;
+        &.select{
+          background: url("../img/confirm_order.png") no-repeat;
+        }
+        p {
+          display: inline-block;
+          width: 236px;
+          height: 34px;
+          margin-left: 34px;
+          margin-top: 16px;
+          span {
+            margin-left: 20px;
+          }
+        }
+      }
+      div:last-child {
+        width: 272px;
+        height: 175px;
+        float: left;
+        background: none;
+        border: 1px solid #dfdfdf;
+        text-align: center;
+        display: table-column;
+        vertical-align: bottom;
+        img {
+          width: 25px;
+          height: 27px;
+          cursor: pointer;
+          margin-top: 60px;
+        }
+        a {
+          font-size: 14px;
+          color: #808080;
+          margin: 0;
+          display: block;
+        }
+      }
+    }
+  }
+  .shop_list{
+    p:first-child{
+      font-size: 20px;
+      color: #000;
+      line-height: 40px;
+      display: inline-block;
+      background-color: #e8e8e8;
+      width: 100%;
+      margin-top: 52px;
+      overflow: hidden;
+      text-indent: 40px;
+      a{
+        font-size: 12px;
+        text-align: right;
+        color: #056e7e;
+        float: right;
+        margin-right: 16px;
+      }
+    }
+    form{
+      margin-top: 20px;
+      table:first-child{
+        padding-left: 55px;
+        font-size: 12px;
+        color: #000;
+        text-align: center;
+        tr{
+          td:first-child{
+            width: 770px;
+            text-align: left;
+          }
+          td:nth-child(2){
+            width: 134px;
+          }
+          td:nth-child(3){
+            width: 112px;
+          }
+          td:nth-child(4){
+            width: 79px;
+            text-align: right;
+          }
+          &:last-child{
+            vertical-align: top;
+            td{
+              padding: 20px 0;
+            }
+          }
+        }
+      }
+      div{
+        font-size: 12px;
+        color: #000;
+        /*本组商品金额部分*/
+        &.total_price{
+          text-align: right;
+          line-height: 60px;
+          border-top: 1px dotted #707070 ;
+          span:last-child{
+            color: #ff0000;
+            margin-left: 10px;
+          }
+          span:nth-child(3){
+            margin-right: 40px;
+          }
+          span:first-child{
+            margin-right: 60px;
+          }
+        }
+      }
+      table:last-of-type{
+        width: 1200px;
+        font-size: 12px;
+        color: #000;
+        line-height: 30px;
+        padding: 20px 35px 20px 20px;
+        border: 1px solid #d3d3d3;
+        tr:last-child{
+          /*保存发票信息的按钮*/
+          button{
+            width: 160px;
+            height: 40px;
+            font-size: 16px;
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+            background-color: #ff0000;
+            border: transparent;
+            cursor: pointer;
+          }
+        }
+        td:first-child{
+          width: 300px;
+        }
+        td:nth-child(2),td:last-child{
+          text-align: right;
+          &:last-child{
+            width: 126px;
+          }
+          &:nth-child(2){
+            width: 685px;
+          }
+        }
+        a{
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          border: 2px solid #a2a2a2;
+          text-align: center;
+          line-height: 14px;
+          color: #a2a2a2;
+          margin-left: 10px;
+        }
+        input[type="radio"]{
+          margin:0 10px 0 20px;
+          vertical-align: inherit;
+        }
+        input[type="checkbox"]{
+          margin-right: 10px;
+        }
+        input[type="text"]{
+          width: 100px;
+          height: 20px;
+          outline: none;
+        }
+        span{
+          color: #414141;
+        }
+        .tel_num{
+          margin-left: 20px;
+        }
+        .company{
+          padding-left: 53px;
+        }
+        &+div{
+          width: 1200px;
+          background-color: #e8e8e8;
+          overflow: hidden;
+          input[type=submit]{
+            width: 190px;
+            height: 50px;
+            background-color: #ff0000;
+            font-size: 20px;
+            line-height: 50px;
+            color: #fff;
+            text-align: center;
+            outline: none;
+            border: none;
+            float: right;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+

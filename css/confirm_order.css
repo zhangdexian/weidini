@@ -1,0 +1,228 @@
+.middle {
+  width: 1160px;
+  padding: 20px 20px 200px 20px;
+  margin: 0 auto;
+}
+.middle .confirm_order h5 {
+  font-size: 22px;
+  color: #000;
+  font-family: 微软雅黑;
+  line-height: 62px;
+}
+.middle .confirm_order h5 + p {
+  display: inline-block;
+  font-size: 18px;
+  color: #000;
+  line-height: 40px;
+  background-color: #e8e8e8;
+  width: 100%;
+  text-indent: 56px;
+}
+.middle .confirm_order > div {
+  width: 1120px;
+  border: 1px solid #d2d2d2;
+  overflow: hidden;
+  padding: 30px 20px;
+  margin-top: 30px;
+  /*收货人的地址信息*/
+  font-size: 12px;
+  color: #414141;
+  font-family: 微软雅黑;
+}
+.middle .confirm_order > div div:not(:last-child) {
+  width: 272px;
+  height: 175px;
+  float: left;
+  margin-right: 10px;
+  cursor: pointer;
+  background: url("../img/confirm_order02.png") no-repeat;
+}
+.middle .confirm_order > div div:not(:last-child).select {
+  background: url("../img/confirm_order.png") no-repeat;
+}
+.middle .confirm_order > div div:not(:last-child) p {
+  display: inline-block;
+  width: 236px;
+  height: 34px;
+  margin-left: 34px;
+  margin-top: 16px;
+}
+.middle .confirm_order > div div:not(:last-child) p span {
+  margin-left: 20px;
+}
+.middle .confirm_order > div div:last-child {
+  width: 272px;
+  height: 175px;
+  float: left;
+  background: none;
+  border: 1px solid #dfdfdf;
+  text-align: center;
+  display: table-column;
+  vertical-align: bottom;
+}
+.middle .confirm_order > div div:last-child img {
+  width: 25px;
+  height: 27px;
+  cursor: pointer;
+  margin-top: 60px;
+}
+.middle .confirm_order > div div:last-child a {
+  font-size: 14px;
+  color: #808080;
+  margin: 0;
+  display: block;
+}
+.middle .shop_list p:first-child {
+  font-size: 20px;
+  color: #000;
+  line-height: 40px;
+  display: inline-block;
+  background-color: #e8e8e8;
+  width: 100%;
+  margin-top: 52px;
+  overflow: hidden;
+  text-indent: 40px;
+}
+.middle .shop_list p:first-child a {
+  font-size: 12px;
+  text-align: right;
+  color: #056e7e;
+  float: right;
+  margin-right: 16px;
+}
+.middle .shop_list form {
+  margin-top: 20px;
+}
+.middle .shop_list form table:first-child {
+  padding-left: 55px;
+  font-size: 12px;
+  color: #000;
+  text-align: center;
+}
+.middle .shop_list form table:first-child tr td:first-child {
+  width: 770px;
+  text-align: left;
+}
+.middle .shop_list form table:first-child tr td:nth-child(2) {
+  width: 134px;
+}
+.middle .shop_list form table:first-child tr td:nth-child(3) {
+  width: 112px;
+}
+.middle .shop_list form table:first-child tr td:nth-child(4) {
+  width: 79px;
+  text-align: right;
+}
+.middle .shop_list form table:first-child tr:last-child {
+  vertical-align: top;
+}
+.middle .shop_list form table:first-child tr:last-child td {
+  padding: 20px 0;
+}
+.middle .shop_list form div {
+  font-size: 12px;
+  color: #000;
+  /*本组商品金额部分*/
+}
+.middle .shop_list form div.total_price {
+  text-align: right;
+  line-height: 60px;
+  border-top: 1px dotted #707070 ;
+}
+.middle .shop_list form div.total_price span:last-child {
+  color: #ff0000;
+  margin-left: 10px;
+}
+.middle .shop_list form div.total_price span:nth-child(3) {
+  margin-right: 40px;
+}
+.middle .shop_list form div.total_price span:first-child {
+  margin-right: 60px;
+}
+.middle .shop_list form table:last-of-type {
+  width: 1200px;
+  font-size: 12px;
+  color: #000;
+  line-height: 30px;
+  padding: 20px 35px 20px 20px;
+  border: 1px solid #d3d3d3;
+}
+.middle .shop_list form table:last-of-type tr:last-child {
+  /*保存发票信息的按钮*/
+}
+.middle .shop_list form table:last-of-type tr:last-child button {
+  width: 160px;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  background-color: #ff0000;
+  border: transparent;
+  cursor: pointer;
+}
+.middle .shop_list form table:last-of-type td:first-child {
+  width: 300px;
+}
+.middle .shop_list form table:last-of-type td:nth-child(2),
+.middle .shop_list form table:last-of-type td:last-child {
+  text-align: right;
+}
+.middle .shop_list form table:last-of-type td:nth-child(2):last-child,
+.middle .shop_list form table:last-of-type td:last-child:last-child {
+  width: 126px;
+}
+.middle .shop_list form table:last-of-type td:nth-child(2):nth-child(2),
+.middle .shop_list form table:last-of-type td:last-child:nth-child(2) {
+  width: 685px;
+}
+.middle .shop_list form table:last-of-type a {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #a2a2a2;
+  text-align: center;
+  line-height: 14px;
+  color: #a2a2a2;
+  margin-left: 10px;
+}
+.middle .shop_list form table:last-of-type input[type="radio"] {
+  margin: 0 10px 0 20px;
+  vertical-align: inherit;
+}
+.middle .shop_list form table:last-of-type input[type="checkbox"] {
+  margin-right: 10px;
+}
+.middle .shop_list form table:last-of-type input[type="text"] {
+  width: 100px;
+  height: 20px;
+  outline: none;
+}
+.middle .shop_list form table:last-of-type span {
+  color: #414141;
+}
+.middle .shop_list form table:last-of-type .tel_num {
+  margin-left: 20px;
+}
+.middle .shop_list form table:last-of-type .company {
+  padding-left: 53px;
+}
+.middle .shop_list form table:last-of-type + div {
+  width: 1200px;
+  background-color: #e8e8e8;
+  overflow: hidden;
+}
+.middle .shop_list form table:last-of-type + div input[type=submit] {
+  width: 190px;
+  height: 50px;
+  background-color: #ff0000;
+  font-size: 20px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  outline: none;
+  border: none;
+  float: right;
+  cursor: pointer;
+}
