@@ -1,3 +1,26 @@
+.target{
+  display: none;
+  background-color: #ffffff;
+  position: fixed;
+  left:0;
+  top:0;
+  background-repeat: no-repeat;
+  z-index:1000;
+}
+.hbox {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid red;
+  box-sizing: border-box;
+  cursor: crosshair;
+}
+
+
+
 .middle {
   padding-top: 56px;
   .pro_details {
@@ -11,6 +34,7 @@
         width: 350px;
         height: 350px;
         overflow: hidden;
+        position: relative;
         a {
           display: none;
           &.current {

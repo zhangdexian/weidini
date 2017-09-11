@@ -115,9 +115,34 @@
           border: 1px solid #e6e6e6;
           margin: 14px 32px;
           margin-left: 0;
-          input {
+          position: relative;
+
+          /*改变radio的选中样式*/
+          span{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            color: #ff0f0f;
+            border: 1px solid #ff0000;
+            font-size: 20px;
+            text-indent: 2px;
+            line-height: 8px;
+            font-weight: bold;
+            vertical-align: middle;
+            position: absolute;
+            left: 9px;
+            top: 12px;
+            display: none;
+          }
+          input[type=radio] {
             vertical-align: 94%;
             margin-left: 10px;
+            &:checked{
+              opacity: 0;
+              &+span{
+                display: inline-block;
+              }
+            }
           }
           img {
             margin-left: 20px;
@@ -138,12 +163,13 @@
       div:first-child {
         float: left;
         margin-left: 56px;
+        position: relative;
         img{
           width: 120px;
           height: 30px;
           vertical-align: middle;
         }
-        span{
+        span:not(:first-of-type){
           font-size: 14px;
           color: #000;
           line-height: 60px;
@@ -151,9 +177,32 @@
             margin-left: 54px;
           }
         }
+        span:first-of-type{
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          color: #ff0f0f;
+          border: 1px solid #ff0000;
+          font-size: 20px;
+          text-indent: 2px;
+          line-height: 8px;
+          font-weight: bold;
+          vertical-align: middle;
+          position: absolute;
+          left: -1px;
+          top: 23px;
+          display: none;
+
+        }
         input{
           vertical-align: middle;
           margin-right: 24px;
+          &:checked {
+            opacity: 0;
+            & + span{
+              display: inline-block;
+            }
+          }
         }
       }
       div:last-child {
@@ -193,11 +242,29 @@
         margin-left: 54px;
         margin-top: 20px;
       }
-      input{
-        width: 190px;
-        height: 30px;
-        margin-left: 50px;
+      .pwd{
+        padding: 4px 0;
+        display: inline-block;
+        border: 1px solid #b1b0b0;
+        margin-left: 48px;
         margin-top: 20px;
+        input{
+          width: 30px;
+          height: 22px;
+          border: none;
+          outline: none;
+          text-align: center;
+          line-height: 22px;
+          vertical-align: middle;
+          &:not(:last-child){
+            border-right: 1px solid #b1b0b0;
+          }
+          &:first-child,input:last-child{
+            width: 30px;
+            height: 22px;
+            padding-left: 4px;
+          }
+        }
       }
       a{
         font-size: 12px;

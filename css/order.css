@@ -62,7 +62,6 @@
   float: left;
   width: 986px;
   margin-left: 20px;
-  /*去除对最后一个div  页面跳转的影响*/
 }
 .middle > div:nth-child(2) h4 {
   padding-left: 14px;
@@ -122,80 +121,83 @@
   transform: rotate(90deg);
 }
 .middle > div:nth-child(2) > div:nth-child(3) div:nth-child(4) {
-  margin-left: 50px;
+  margin-left: 58px;
 }
 .middle > div:nth-child(2) > div:nth-child(3) div:nth-child(5) {
   margin-left: 58px;
 }
-.middle > div:nth-child(2) > div:not(:last-child) {
+.middle > div:nth-child(2) .order_details {
+  /*去除对最后一个div  页面跳转的影响*/
+}
+.middle > div:nth-child(2) .order_details > div {
   margin-top: 20px;
   border: 1px solid #bfbfbf;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > p {
+.middle > div:nth-child(2) .order_details > div > p {
   font-size: 14px;
   color: #000;
   line-height: 50px;
   border-bottom: 1px solid #bfbfbf;
   padding-left: 16px;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > p span:first-child {
+.middle > div:nth-child(2) .order_details > div > p span:first-child {
   color: #056e7e;
   margin-left: 4px;
   margin-right: 50px;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > p span:nth-child(2) {
+.middle > div:nth-child(2) .order_details > div > p span:nth-child(2) {
   margin-right: 100px;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table {
+.middle > div:nth-child(2) .order_details > div > table {
   font-size: 12px;
   border-collapse: collapse;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:first-child {
+.middle > div:nth-child(2) .order_details > div > table td:first-child {
   width: 528px;
   text-align: left;
   /*订单图片和标特部分*/
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:first-child ul li {
+.middle > div:nth-child(2) .order_details > div > table td:first-child ul li {
   overflow: hidden;
   padding: 20px 0 20px 18px;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:first-child ul li:not(:first-child) {
+.middle > div:nth-child(2) .order_details > div > table td:first-child ul li:not(:first-child) {
   border-top: 1px solid #c9c9c9;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:first-child ul li img {
+.middle > div:nth-child(2) .order_details > div > table td:first-child ul li img {
   float: left;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:first-child ul li div {
+.middle > div:nth-child(2) .order_details > div > table td:first-child ul li div {
   float: left;
   margin-left: 20px;
   line-height: 20px;
   color: #000;
   margin-top: 6px;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:not(:first-child) {
+.middle > div:nth-child(2) .order_details > div > table td:not(:first-child) {
   text-align: center;
   border-left: 1px solid #c9c9c9;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:not(:first-child):nth-child(2) {
+.middle > div:nth-child(2) .order_details > div > table td:not(:first-child):nth-child(2) {
   width: 110px;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:not(:first-child):nth-child(2) span {
+.middle > div:nth-child(2) .order_details > div > table td:not(:first-child):nth-child(2) span {
   color: #ff0000;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:not(:first-child):nth-child(3) {
+.middle > div:nth-child(2) .order_details > div > table td:not(:first-child):nth-child(3) {
   width: 160px;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:not(:first-child):nth-child(3) a {
+.middle > div:nth-child(2) .order_details > div > table td:not(:first-child):nth-child(3) a {
   color: #056e7e;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:not(:first-child):nth-child(4) {
+.middle > div:nth-child(2) .order_details > div > table td:not(:first-child):nth-child(4) {
   width: 96px;
   text-align: center;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:not(:first-child):nth-child(4) a:first-child {
+.middle > div:nth-child(2) .order_details > div > table td:not(:first-child):nth-child(4) a:first-child {
   color: #056e7e;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:not(:first-child):nth-child(4) a:last-child {
+.middle > div:nth-child(2) .order_details > div > table td:not(:first-child):nth-child(4) a:last-child {
   display: block;
   width: 60px;
   height: 16px;
@@ -206,10 +208,10 @@
   border-radius: 4px;
   margin: 0 auto;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:not(:first-child):nth-child(5) {
+.middle > div:nth-child(2) .order_details > div > table td:not(:first-child):nth-child(5) {
   width: 100px;
 }
-.middle > div:nth-child(2) > div:not(:last-child) > table td:not(:first-child):nth-child(5) button {
+.middle > div:nth-child(2) .order_details > div > table td:not(:first-child):nth-child(5) button {
   color: #056e7e;
   background-color: transparent;
   border: none;

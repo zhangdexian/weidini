@@ -120,108 +120,108 @@
           }
         }
         &:nth-child(4){
-          margin-left: 50px;
+          margin-left: 58px;
         }
         &:nth-child(5){
           margin-left: 58px;
         }
       }
     }
+    .order_details{
+      /*去除对最后一个div  页面跳转的影响*/
+      &>div{
+        margin-top: 20px;
+        border: 1px solid #bfbfbf;
+        &>p{
+          font-size: 14px;
+          color: #000;
+          line-height: 50px;
+          border-bottom: 1px solid #bfbfbf;
+          padding-left: 16px;
+          span:first-child{
+            color: #056e7e;
+            margin-left: 4px;
+            margin-right: 50px;
+          }
+          span:nth-child(2){
+            margin-right: 100px;
+          }
+        }
+        &>table{
+          font-size: 12px;
+          border-collapse: collapse;
+          td:first-child{
+            width: 528px;
+            text-align: left;
 
-    /*去除对最后一个div  页面跳转的影响*/
-    &>div:not(:last-child){
-      margin-top: 20px;
-      border: 1px solid #bfbfbf;
-      &>p{
-        font-size: 14px;
-        color: #000;
-        line-height: 50px;
-        border-bottom: 1px solid #bfbfbf;
-        padding-left: 16px;
-        span:first-child{
-          color: #056e7e;
-          margin-left: 4px;
-          margin-right: 50px;
-        }
-        span:nth-child(2){
-          margin-right: 100px;
-        }
-      }
-      &>table{
-        font-size: 12px;
-        border-collapse: collapse;
-        td:first-child{
-          width: 528px;
-          text-align: left;
-
-          /*订单图片和标特部分*/
-          ul{
-            li{
-              overflow: hidden;
-              padding: 20px 0 20px 18px;
-              &:not(:first-child){
-                border-top: 1px solid #c9c9c9;
-              }
-              img{
-                float: left;
-              }
-              div{
-                float: left;
-                margin-left: 20px;
-                line-height: 20px;
-                color: #000;
-                margin-top: 6px;
+            /*订单图片和标特部分*/
+            ul{
+              li{
+                overflow: hidden;
+                padding: 20px 0 20px 18px;
+                &:not(:first-child){
+                  border-top: 1px solid #c9c9c9;
+                }
+                img{
+                  float: left;
+                }
+                div{
+                  float: left;
+                  margin-left: 20px;
+                  line-height: 20px;
+                  color: #000;
+                  margin-top: 6px;
+                }
               }
             }
           }
-        }
-        td:not(:first-child){
-          text-align: center;
-          border-left: 1px solid #c9c9c9;
-          &:nth-child(2){
-            width:110px;
-            span{
-              color: #ff0000;
-            }
-          }
-          &:nth-child(3){
-            width: 160px;
-            a{
-              color: #056e7e;
-            }
-          }
-          &:nth-child(4){
-            width: 96px;
+          td:not(:first-child){
             text-align: center;
-            a:first-child{
-              color: #056e7e;
+            border-left: 1px solid #c9c9c9;
+            &:nth-child(2){
+              width:110px;
+              span{
+                color: #ff0000;
+              }
             }
-            a:last-child{
-              display: block;
-              width: 60px;
-              height: 16px;
+            &:nth-child(3){
+              width: 160px;
+              a{
+                color: #056e7e;
+              }
+            }
+            &:nth-child(4){
+              width: 96px;
               text-align: center;
-              color: #fff;
-              line-height: 16px;
-              background-color: #ff4343;
-              border-radius: 4px;
-              margin: 0 auto;
+              a:first-child{
+                color: #056e7e;
+              }
+              a:last-child{
+                display: block;
+                width: 60px;
+                height: 16px;
+                text-align: center;
+                color: #fff;
+                line-height: 16px;
+                background-color: #ff4343;
+                border-radius: 4px;
+                margin: 0 auto;
+              }
             }
-          }
-          &:nth-child(5){
-            width: 100px;
-            button{
-              color: #056e7e;
-              background-color: transparent;
-              border: none;
-              outline: none;
-              cursor: pointer;
+            &:nth-child(5){
+              width: 100px;
+              button{
+                color: #056e7e;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                cursor: pointer;
+              }
             }
           }
         }
       }
     }
-
   }
 }
 

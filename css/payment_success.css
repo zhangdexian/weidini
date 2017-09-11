@@ -23,6 +23,7 @@
   float: left;
   margin-left: 90px;
   margin-top: 74px;
+  /*查看订单  返回支付*/
 }
 .middle div:first-child > div:first-of-type h3 {
   font-size: 30px;
@@ -51,17 +52,18 @@
   font-size: 14px;
   margin-top: 20px;
 }
-.middle div:first-child > div:first-of-type div button {
+.middle div:first-child > div:first-of-type div a:not(:last-child) {
+  display: inline-block;
   width: 86px;
   height: 28px;
   border: 1px solid #e5e5e5;
   color: #999999;
   line-height: 28px;
   text-align: center;
-  background-color: transparent;
+  background-color: #f6f6f6;
   cursor: pointer;
 }
-.middle div:first-child > div:first-of-type div a {
+.middle div:first-child > div:first-of-type div a:last-child {
   color: #ff0000;
   margin-left: 32px;
 }
