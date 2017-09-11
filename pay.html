@@ -19,12 +19,12 @@
             <div class="welcome">您好，欢迎来到优购时尚商城！</div>
             <span>服务热线：400-163-8888</span>
             <ul>
-                <li><a href="">登录</a></li>
-                <li><a href="">注册</a></li>
-                <li><a href="">我的订单</a></li>
+                <li><a href="login.html">登录</a></li>
+                <li><a href="register.html">注册</a></li>
+                <li><a href="order.html">我的订单</a></li>
                 <li><a href="">我的维蒂尼</a></li>
                 <li><a href="">帮助中心</a></li>
-                <li><a href="">个人中心</a></li>
+                <li><a href="user.html">个人中心</a></li>
             </ul>
         </div>
     </div>
@@ -96,36 +96,36 @@
         <div>
             <p>您的订单已生成，请尽快付款！订单号：<span>60055984715</span></p>
             <p>应付金额：<span>￥2976.00</span>元</p>
-            <p>请您在<span>24小时</span>内完成支付，否则订单会被自动取消（库存紧俏订单请参见详情页时限） <a href="javascript:;">订单详情<span></span></a></p>
+            <p>请您在<span>24小时</span>内完成支付，否则订单会被自动取消（库存紧俏订单请参见详情页时限） <a href="order_details.html">订单详情<span></span></a></p>
         </div>
     </div>
     <form>
         <h4>您可以选择付款方式</h4>
         <div>
             <h5>网银支付</h5>
-            <ul>
-                <li><input type="radio"><img src="img/pay02.png" alt=""></li>
-                <li><input type="radio"><img src="img/pay03.png" alt=""></li>
-                <li><input type="radio"><img src="img/pay04.png" alt=""></li>
-                <li><input type="radio"><img src="img/pay05.png" alt=""></li>
-                <li><input type="radio"><img src="img/pay06.png" alt=""></li>
-                <li><input type="radio"><img src="img/pay07.png" alt=""></li>
-                <li><input type="radio"><img src="img/pay08.png" alt=""></li>
-                <li><input type="radio"><img src="img/pay09.png" alt=""></li>
-                <li><input type="radio"><img src="img/pay10.png" alt=""></li>
-                <li><input type="radio"><img src="img/pay11.png" alt=""></li>
-                <li><input type="radio"><img src="img/pay14.png" alt=""></li>
-                <li><input type="radio"><img src="img/pay15.png" alt=""></li>
+            <ul class="payment">
+                <li><input type="radio" name="payment"><span>·</span><img src="img/pay02.png" alt=""></li>
+                <li><input type="radio" name="payment"><span>·</span><img src="img/pay03.png" alt=""></li>
+                <li><input type="radio" name="payment"><span>·</span><img src="img/pay04.png" alt=""></li>
+                <li><input type="radio" name="payment"><span>·</span><img src="img/pay05.png" alt=""></li>
+                <li><input type="radio" name="payment"><span>·</span><img src="img/pay06.png" alt=""></li>
+                <li><input type="radio" name="payment"><span>·</span><img src="img/pay07.png" alt=""></li>
+                <li><input type="radio" name="payment"><span>·</span><img src="img/pay08.png" alt=""></li>
+                <li><input type="radio" name="payment"><span>·</span><img src="img/pay09.png" alt=""></li>
+                <li><input type="radio" name="payment"><span>·</span><img src="img/pay10.png" alt=""></li>
+                <li><input type="radio" name="payment"><span>·</span><img src="img/pay11.png" alt=""></li>
+                <li><input type="radio" name="payment"><span>·</span><img src="img/pay14.png" alt=""></li>
+                <li><input type="radio" name="payment"><span>·</span><img src="img/pay15.png" alt=""></li>
             </ul>
             <h5>平台支付</h5>
-            <ul>
-                <li><input type="radio"><img src="img/pay12.png" alt=""></li>
-                <li><input type="radio"><img src="img/pay13.png" alt=""></li>
+            <ul class="payment">
+                <li><input type="radio" name="payment"><span>·</span><img src="img/pay12.png" alt=""></li>
+                <li><input type="radio" name="payment"><span>·</span><img src="img/pay13.png" alt=""></li>
             </ul>
         </div>
         <div>
-            <div>
-                <input type="radio"><img src="img/pay02.png" alt="">
+            <div class="payment_select">
+                <input type="radio"><span>·</span><img src="img/pay02.png" alt="">
                 <span>***</span><span>5148</span>
                 <span>储存卡 | 快捷</span>
             </div>
@@ -137,7 +137,15 @@
         <div>
             <p><span>√</span>您在安全的环境中，请放心使用！</p>
             <p>支付密码:</p>
-            <input type="text"><a href="javascript:;">忘记密码？</a>
+            <div class="pwd">
+                <input type="password" maxlength="1">
+                <input type="password" maxlength="1">
+                <input type="password" maxlength="1">
+                <input type="password" maxlength="1">
+                <input type="password" maxlength="1">
+                <input type="password" maxlength="1">
+            </div>
+            <a href="javascript:;">忘记密码？</a>
             <p>请输入6位数字支付密码</p>
         </div>
         <button>确认付款</button>
@@ -207,5 +215,6 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/index.js"></script>
 <script src="js/placeholder.js"></script>
+<script src="js/pay.js"></script>
 </body>
 </html>

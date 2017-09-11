@@ -19,12 +19,12 @@
             <div class="welcome">您好，欢迎来到优购时尚商城！</div>
             <span>服务热线：400-163-8888</span>
             <ul>
-                <li><a href="">登录</a></li>
-                <li><a href="">注册</a></li>
-                <li><a href="">我的订单</a></li>
+                <li><a href="login.html">登录</a></li>
+                <li><a href="register.html">注册</a></li>
+                <li><a href="order.html">我的订单</a></li>
                 <li><a href="">我的维蒂尼</a></li>
                 <li><a href="">帮助中心</a></li>
-                <li><a href="">个人中心</a></li>
+                <li><a href="user.html">个人中心</a></li>
             </ul>
         </div>
     </div>
@@ -79,33 +79,6 @@
             </div>
         </div>
         <ul class="nav">
-            <!--<li id="sort">
-                商品分类<span>&lt;</span>
-                &lt;!&ndash;点击商品分类弹出子菜单&ndash;&gt;
-                <div class="sub_nav">
-                    <dl>
-                        <dt>浴室柜</dt>
-                        <dd><a href="javascript:;">实木浴室柜</a></dd>
-                        <dd><a href="javascript:;">陶瓷浴室柜</a></dd>
-                        <dd><a href="javascript:;">PVC浴室柜</a></dd>
-                        <dd><a href="javascript:;">亚克力浴室柜</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>浴室柜</dt>
-                        <dd><a href="javascript:;">实木浴室柜</a></dd>
-                        <dd><a href="javascript:;">陶瓷浴室柜</a></dd>
-                        <dd><a href="javascript:;">PVC浴室柜</a></dd>
-                        <dd><a href="javascript:;">亚克力浴室柜</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>浴室柜</dt>
-                        <dd><a href="javascript:;">实木浴室柜</a></dd>
-                        <dd><a href="javascript:;">陶瓷浴室柜</a></dd>
-                        <dd><a href="javascript:;">PVC浴室柜</a></dd>
-                        <dd><a href="javascript:;">亚克力浴室柜</a></dd>
-                    </dl>
-                </div>
-            </li>-->
             <li><a href="">首页</a></li>
             <li><a href="">实木浴室柜</a></li>
             <li><a href="">陶瓷浴室柜</a></li>
@@ -198,13 +171,13 @@
                    <input type="text" placeholder="收货人姓名" class="myplace name">
                </p>
                <p>
-                   <label for=""><span>*</span>&nbsp;地址:</label>
-                   <select name="">
+                   <label for="prov"><span>*</span>&nbsp;地址:</label>
+                   <select name="" id="prov">
                        <option value="">省/直辖市</option>
                    </select>
-                   <select name="">
+                   <select name="" id="city">
                        <option value="">市</option></select>
-                   <select name="">
+                   <select name="" id="county">
                        <option value="">区/县</option>
                    </select>
                    <select name="">
@@ -305,5 +278,7 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/index.js"></script>
 <script src="js/placeholder.js"></script>
+<script src="js/address.js"></script>
+<script src="js/district.js"></script>
 </body>
 </html>
