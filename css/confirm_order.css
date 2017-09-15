@@ -72,7 +72,7 @@
   margin: 0;
   display: block;
 }
-.middle .shop_list p:first-child {
+.middle .shop_list h5 {
   font-size: 20px;
   color: #000;
   line-height: 40px;
@@ -82,8 +82,9 @@
   margin-top: 52px;
   overflow: hidden;
   text-indent: 40px;
+  font-weight: normal;
 }
-.middle .shop_list p:first-child a {
+.middle .shop_list h5 a {
   font-size: 12px;
   text-align: right;
   color: #056e7e;
@@ -93,31 +94,44 @@
 .middle .shop_list form {
   margin-top: 20px;
 }
-.middle .shop_list form table:first-child {
+.middle .shop_list form table:not( :nth-last-child(2)) {
   padding-left: 55px;
   font-size: 12px;
   color: #000;
   text-align: center;
 }
-.middle .shop_list form table:first-child tr td:first-child {
+.middle .shop_list form table:not( :nth-last-child(2)) tr td:first-child {
   width: 770px;
   text-align: left;
 }
-.middle .shop_list form table:first-child tr td:nth-child(2) {
+.middle .shop_list form table:not( :nth-last-child(2)) tr td:nth-child(2) {
   width: 134px;
 }
-.middle .shop_list form table:first-child tr td:nth-child(3) {
+.middle .shop_list form table:not( :nth-last-child(2)) tr td:nth-child(3) {
   width: 112px;
 }
-.middle .shop_list form table:first-child tr td:nth-child(4) {
+.middle .shop_list form table:not( :nth-last-child(2)) tr td:nth-child(4) {
   width: 79px;
-  text-align: right;
+  text-align: center;
 }
-.middle .shop_list form table:first-child tr:last-child {
+.middle .shop_list form table:not( :nth-last-child(2)) tr:last-child {
   vertical-align: top;
 }
-.middle .shop_list form table:first-child tr:last-child td {
+.middle .shop_list form table:not( :nth-last-child(2)) tr:last-child td {
   padding: 20px 0;
+}
+.middle .shop_list form table:not( :nth-last-child(2)) tr:nth-child(2) td:first-child {
+  overflow: hidden;
+}
+.middle .shop_list form table:not( :nth-last-child(2)) tr:nth-child(2) td:first-child img {
+  float: left;
+  width: 78px;
+  height: 83px;
+}
+.middle .shop_list form table:not( :nth-last-child(2)) tr:nth-child(2) td:first-child > div {
+  margin-top: 12px;
+  margin-left: 8px;
+  float: left;
 }
 .middle .shop_list form div {
   font-size: 12px;

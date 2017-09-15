@@ -53,6 +53,7 @@
   height: 80px;
   margin: 20px 4px;
   border: 2px solid transparent;
+  overflow: hidden;
 }
 .middle .pro_details .slidebox .pic_sm a.current {
   border: 2px solid #ff0000;

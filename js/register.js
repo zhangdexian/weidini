@@ -11,6 +11,25 @@ $(function(){
     var telNum = /\d{3}-\d{8}|\d{4}-\{7,8}/;
 
 
+
+
+
+    (function(){
+        var cart_num = $(".cart_num");
+        var l = localStorage.length;
+        var cartNum = l;
+        for(var i = 0 ; i < l ;i++){
+            if(localStorage.getItem("payStr")){
+                cartNum --;
+                break;
+            }
+        }
+        cart_num.text(cartNum);
+    })();
+
+
+
+
     user_name.blur(function(){
         if(!userName.test(user_name.val())){
             alert("请输入正确的用户名！");
@@ -33,9 +52,9 @@ $(function(){
     tel_num.blur(function(){
         if(!telNum.test(tel_num.val())){
             alert("请输入正确的手机号！");
-            tel_num.val("");
         }
     });
+
 
 
 

@@ -1,5 +1,6 @@
 .middle {
   padding-bottom: 106px;
+  font-family: 微软雅黑;
 }
 .middle .item {
   width: 1200px;
@@ -14,7 +15,6 @@
 .middle .item div:first-child h5 {
   display: inline-block;
   float: left;
-  font-family: 微软雅黑;
   font-size: 14px;
   color: #000;
   line-height: 46px;
@@ -25,7 +25,6 @@
 }
 .middle .item div:first-child ul li {
   float: left;
-  font-family: 微软雅黑;
   font-size: 14px;
   line-height: 18px;
   padding: 4px 4px;
@@ -35,6 +34,7 @@
 }
 .middle .item div:first-child ul li span {
   color: #ff0000;
+  cursor: pointer;
 }
 .middle .item div:first-child ul li span:first-child {
   margin-right: 10px;
@@ -47,6 +47,7 @@
   overflow: hidden;
   padding: 0 20px;
   border: 1px solid #cecece;
+  cursor: pointer;
 }
 .middle .item .select_txt dl {
   border: none;
@@ -72,9 +73,9 @@
 }
 .middle .item .select_txt div:first-of-type {
   border: none;
+  float: right;
 }
 .middle .item .select_txt div:first-of-type span {
-  font-family: 微软雅黑;
   display: inline-block;
   width: 60px;
   height: 24px;
@@ -86,28 +87,26 @@
 .middle .item .select_txt div:first-of-type span:first-child {
   margin-right: 10px;
 }
-.middle .item .select_txt div:first-of-type {
-  float: right;
+.middle .item #material {
+  cursor: pointer;
 }
 .middle .item #material dt {
   line-height: 50px;
-  font-family: 微软雅黑;
 }
 .middle .item #material dd {
   line-height: 42px;
-  font-family: 微软雅黑;
 }
 .middle .item #material span {
   margin: 12px 0 0 0;
-  font-family: 微软雅黑;
 }
-.middle .item #fix dt {
+.middle .item #fix_method {
+  cursor: pointer;
+}
+.middle .item #fix_method dt {
   line-height: 50px;
-  font-family: 微软雅黑;
 }
-.middle .item #fix dd {
+.middle .item #fix_method dd {
   line-height: 42px;
-  font-family: 微软雅黑;
 }
 .middle .sequence {
   width: 1160px;
@@ -122,7 +121,6 @@
 }
 .middle .sequence ul li {
   float: left;
-  font-family: 微软雅黑;
   font-size: 14px;
   line-height: 30px;
   padding: 0 22px 0 6px;
@@ -160,28 +158,42 @@
   bottom: 6px;
   right: 8px;
 }
-.middle .sequence input {
+.middle .sequence .min_price,
+.middle .sequence .max_price {
+  font-size: 14px;
+  display: inline-block;
   width: 60px;
   height: 28px;
-  outline: none;
+  border: 1px solid #cecece;
+  line-height: 28px;
 }
-.middle .sequence input + div {
+.middle .sequence .min_price input,
+.middle .sequence .max_price input {
+  width: 42px;
+  height: 30px;
+  border: none;
+  outline: none;
+  line-height: 30px;
+  background: transparent;
+  padding-left: 4px;
+}
+.middle .sequence .sum_num {
   float: right;
 }
-.middle .sequence input + div p {
+.middle .sequence .sum_num p {
   font-size: 14px;
   color: #666666;
   display: inline;
   line-height: 32px;
 }
-.middle .sequence input + div p strong {
+.middle .sequence .sum_num p strong {
   color: #000;
 }
-.middle .sequence input + div p + span {
+.middle .sequence .sum_num p + span {
   color: #ff0000;
   margin-left: 26px;
 }
-.middle .sequence input + div span:nth-last-child(2) {
+.middle .sequence .sum_num span:nth-last-child(2) {
   text-align: center;
   line-height: 30px;
   display: inline-block;
@@ -191,7 +203,7 @@
   margin-left: 34px;
   margin-right: -4px;
 }
-.middle .sequence input + div span:nth-last-child(1) {
+.middle .sequence .sum_num span:nth-last-child(1) {
   text-align: center;
   line-height: 30px;
   display: inline-block;

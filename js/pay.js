@@ -5,6 +5,35 @@ $(function(){
     var paymentSelectRadio = $(".payment_select input");
     var pwdList = $(".pwd input");
     var confirm = $('#confirm');
+    var pay = $(".pay");
+
+
+
+
+    (function(){
+        var cart_num = $(".cart_num");
+        var l = localStorage.length;
+        var cartNum = l;
+        for(var i = 0 ; i < l ;i++){
+            if(localStorage.getItem("payStr")){
+                cartNum --;
+                break;
+            }
+        }
+        cart_num.text(cartNum);
+    })();
+
+
+
+    getMoney();
+    confirmEvent();
+
+
+    /*从localstorage拿到待支付金额*/
+    function getMoney(){
+        var _pay = localStorage.getItem("payStr");
+        pay.text(_pay);
+    }
 
 
 
@@ -15,15 +44,8 @@ $(function(){
         paymentSelectImg.attr("src",imgSrc);
         paymentSelectRadio.prop("checked",true);
 
-    })
+    });
 
-/*    pwd.click(function(){
-        var _psd = $(".pwd input:first-child");
-        _psd.focus();
-        $(".pwd input").keyup(function(){
-            $(this).blur().next().focus();
-        });
-    })*/
 
     pwdList.each(function (i) {
         var _this = $(this);
@@ -50,18 +72,25 @@ $(function(){
             }
         })
 
-    })
+    });
 
 
     pwdList.eq(5).keyup(function(){
         $(this).blur();
         confirm.focus();
-        console.log('jjjjj')
     });
 
     pwdList.eq(5).focus(function () {
         $(this).val('');
     })
+
+    function confirmEvent(){
+        confirm.click(function(){
+            window.open("payment_success.html");
+        });
+
+    }
+
 
 
 

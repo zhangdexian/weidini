@@ -30,7 +30,7 @@
     </div>
     <div class="main_nav">
         <div class="nav_bar">
-            <a href="" class="logo"><img src="img/logo.png" alt=""></a>
+            <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
             <div class="search">
                 <form>
                     <input type="text" placeholder="请输入品牌或商品名称" class="myplace"><button>搜索</button>
@@ -46,8 +46,8 @@
                 </div>
             </div>
             <div class="cart">
-                <a href="javascript:;"><img src="img/cart.png" alt=""></a>
-                <a href="javascript:;">我的购物车</a>
+                <a href="shop_cart.html"><img src="img/cart.png" alt=""></a>
+                <a href="shop_cart.html">我的购物车</a>
                 <span>&gt;</span>
             </div>
             <div class="cart_num">0</div>
@@ -57,21 +57,21 @@
             <div class="sub_nav">
                 <dl>
                     <dt>浴室柜</dt>
-                    <dd><a href="javascript:;">实木浴室柜</a></dd>
+                    <dd><a href="pro_list.html">实木浴室柜</a></dd>
                     <dd><a href="javascript:;">陶瓷浴室柜</a></dd>
                     <dd><a href="javascript:;">PVC浴室柜</a></dd>
                     <dd><a href="javascript:;">亚克力浴室柜</a></dd>
                 </dl>
                 <dl>
                     <dt>浴室柜</dt>
-                    <dd><a href="javascript:;">实木浴室柜</a></dd>
+                    <dd><a href="pro_list.html">实木浴室柜</a></dd>
                     <dd><a href="javascript:;">陶瓷浴室柜</a></dd>
                     <dd><a href="javascript:;">PVC浴室柜</a></dd>
                     <dd><a href="javascript:;">亚克力浴室柜</a></dd>
                 </dl>
                 <dl>
                     <dt>浴室柜</dt>
-                    <dd><a href="javascript:;">实木浴室柜</a></dd>
+                    <dd><a href="pro_list.html">实木浴室柜</a></dd>
                     <dd><a href="javascript:;">陶瓷浴室柜</a></dd>
                     <dd><a href="javascript:;">PVC浴室柜</a></dd>
                     <dd><a href="javascript:;">亚克力浴室柜</a></dd>
@@ -79,11 +79,11 @@
             </div>
         </div>
         <ul class="nav">
-            <li><a href="">首页</a></li>
-            <li><a href="">实木浴室柜</a></li>
-            <li><a href="">陶瓷浴室柜</a></li>
-            <li><a href="">PVC浴室柜</a></li>
-            <li><a href="">亚克力浴室柜</a></li>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="pro_list.html">实木浴室柜</a></li>
+            <li><a href="###">陶瓷浴室柜</a></li>
+            <li><a href="###">PVC浴室柜</a></li>
+            <li><a href="###">亚克力浴室柜</a></li>
         </ul>
     </div>
 </div>
@@ -111,14 +111,14 @@
             </div>
             <div>
                 <img src="img/confirm_order03.png" alt="">
-                <a href="javascript:;">添加地址</a>
+                <a href="address.html">添加地址</a>
             </div>
         </div>
     </div>
     <div class="shop_list">
-        <p>商品清单 <a href="javascript:;">返回购物车修改商品</a></p>
+        <h5>商品清单 <a href="javascript:;">返回购物车修改商品</a></h5>
         <form action="#">
-            <table>
+            <!--<table>
                 <tr>
                     <td>白色恋人官方旗舰店商品信息</td>
                     <td>单价</td>
@@ -128,43 +128,45 @@
                 <tr>
                     <td>
                         <img src="img/confirm_order04.png" alt="">
-                        <p></p>
-                        <p></p>
+                        <div>
+                            <p>白色恋人浴室柜组合洗脸盆柜组合</p>
+                            <p>洗手盆洗漱台洗手台 定制一体盆款 </p>
+                        </div>
                     </td>
                     <td>￥1788.00</td>
                     <td>2</td>
                     <td>￥3576</td>
                 </tr>
-            </table>
+            </table>-->
             <div class="total_price">
                 <span>运费： 免运费</span>
                 <span >已享受优惠:</span>
-                <span >-￥600</span>
+                <span class="discount">-￥600</span>
                 <span >本组商品金额:</span>
-                <span >￥2976.00</span>
+                <span class="total">￥2976.00</span>
             </div>
             <table>
                 <tr>
                     <td><input type="checkbox" checked>开具发票
                         <a href="###">?</a></td>
                     <td>商品金额：</td>
-                    <td>￥2976.00</td>
+                    <td class="total">￥2976.00</td>
                 </tr>
                 <tr>
-                    <td>开票方式: <input type="radio"> <span>纸质发票</span>  <input type="radio" checked><span>电子发票</span></td>
+                    <td>开票方式: <input type="radio" name="aa"> <span>纸质发票</span>  <input type="radio" checked name="aa"><span>电子发票</span></td>
                     <td>运费：</td>
                     <td>￥0.00</td>
                 </tr>
                 <tr>
-                    <td>开票方式: <input type="radio"><span>个人</span>
+                    <td>开票方式: <input type="radio" name="bb"><span>个人</span>
                         <span class=tel_num>收票人手机号: </span> <input type="text" placeholder="填写手机号" class="myplace"></td>
                     <td>活动优惠：</td>
                     <td>-￥600.00</td>
                 </tr>
                 <tr>
-                    <td class="company"><input type="radio" class="company">公司</td>
+                    <td class="company"><input type="radio" name="bb" class="company">公司</td>
                     <td>待支付： </td>
-                    <td>￥2976.00</td>
+                    <td class="pay">￥2976.00</td>
                 </tr>
                 <tr>
                     <td>电子发票开具时间为商品出仓后2-7个工作日，与纸质发票具备同

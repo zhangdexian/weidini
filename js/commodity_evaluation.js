@@ -15,6 +15,18 @@ $(function(){
 
     var imgSrc;
 
+    (function(){
+        var cart_num = $(".cart_num");
+        var l = localStorage.length;
+        var cartNum = l;
+        for(var i = 0 ; i < l ;i++){
+            if(localStorage.getItem("payStr")){
+                cartNum --;
+                break;
+            }
+        }
+        cart_num.text(cartNum);
+    })();
 
 
 
