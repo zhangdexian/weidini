@@ -33,17 +33,18 @@
             <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
             <div class="search">
                 <form>
-                    <input type="text" placeholder="请输入品牌或商品名称" class="myplace"><button>搜索</button>
+                    <input type="text" placeholder="请输入品牌或商品名称" class="myplace" maxlength="50"><button>搜索</button>
                 </form>
                 <div class="brand_select">
                     <ul>
-                        <li>箭牌</li>
-                        <li>摩恩</li>
-                        <li>法恩莎卫浴</li>
-                        <li>美标</li>
-                        <li>白色恋人</li>
+                        <li><a href="javascript:;">箭牌</a></li>
+                        <li><a href="javascript:;">摩恩</a></li>
+                        <li><a href="javascript:;">法恩莎卫浴</a></li>
+                        <li><a href="javascript:;">美标</a></li>
+                        <li><a href="javascript:;">白色恋人</a></li>
                     </ul>
                 </div>
+
             </div>
             <div class="cart">
                 <a href="shop_cart.html"><img src="img/cart.png" alt=""></a>
@@ -94,16 +95,17 @@
 <div class="middle">
     <h3>会员注册</h3>
     <form action="">
-        <div><label for="user_name">用户名</label><input type="text" id="user_name" placeholder="请输入您的账户名" class="myplace"></div>
-        <div><label for="pwd">设置密码</label><input type="text" id="pwd" placeholder="建议至少使用两组字符组合" class="myplace"></div>
-        <div><label for="repwd">确认密码</label><input type="text" id="repwd" placeholder="请再次输入密码" class="myplace"></div>
-        <div><label for="email">Email</label><input type="text" id="email" placeholder="如：58497825@qq.com" class="myplace"></div>
-        <div><label for="tel_num">手机号</label><input type="text" id="tel_num" placeholder="请输入手机号" class="myplace"></div>
+        <div><label for="user_name">用户名</label><input type="text" id="user_name" placeholder="请输入您的账户名" class="myplace"><b></b></div>
+        <div><label for="pwd">设置密码</label><input type="text" id="pwd" placeholder="建议至少使用两组字符组合" class="myplace"><b></b></div>
+        <div><label for="repwd">确认密码</label><input type="text" id="repwd" placeholder="请再次输入密码" class="myplace"><b></b></div>
+        <div><label for="email">Email</label><input type="text" id="email" placeholder="如：58497825@qq.com" class="myplace"><b></b></div>
+        <div><label for="tel_num">手机号</label><input type="text" id="tel_num" placeholder="请输入手机号" class="myplace"><b></b></div>
         <div><label for="identify">手机验证</label><input type="text" id="identify" placeholder="请输入手机验证码" class="myplace">
             <a href="javascript:;">获取验证码</a>
+            <b></b>
         </div>
         <div><input type="checkbox">阅读并同意 <a href="javascript:;">《维蒂尼用户注册协议》</a><a href="javascript:;">《隐私政策》</a></div>
-        <input type="submit" value="立即注册">
+        <button disabled id="register">立即注册</button>
     </form>
 </div>
 <!--middle end-->

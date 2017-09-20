@@ -10,9 +10,12 @@ $(function(){
     var prev = $(".prev");
     var next = $(".next");
     var subMenu = $(".menu").find("li");
-    var hotSell = $(".side_nav+ul").children("li");
     var pageTransition = $(".page_transition a:not(.next,.prev,.ok)");
     var pic_sm = $(".pic_sm a img");
+    var pic_lg = picLg.find("img");
+    var pro_tab = $("#pro_tab li");
+    var pro_toggle = $(".pro_toggle");
+
 
     var imgSrc;
     var buynow = $(".buynow");
@@ -23,6 +26,8 @@ $(function(){
     setPicEvent();
     addToShopCart();
     subMenuEvent();
+    picInit();
+    proTebEvent();
 
 
     (function(){
@@ -126,9 +131,16 @@ $(function(){
         $(this).addClass("current").siblings().removeClass("current");
     });
 
-    hotSell.click(function(){
-        $(this).addClass("current").siblings().removeClass("current");
-    });
+    function proTebEvent(){
+        pro_toggle.eq(1).css("display","block");
+        pro_tab.click(function(){
+            $(this).addClass("current").siblings().removeClass("current");
+            var index = pro_tab.index(this);
+            pro_toggle.eq(index).show().siblings().hide();
+        });
+    }
+
+
 
     pageTransition.click(function(){
         $(this).addClass("current").siblings().removeClass("current");
@@ -137,6 +149,14 @@ $(function(){
 
 
     /*放大镜*/
+    function picInit(){
+        for(var i = 0 ,l = picSm.length; i < l ; i++){
+            if(picSm.eq(i).hasClass("current")){
+                imgSrc = pic_sm.eq(i).attr("src");
+            }
+        }
+        pic_lg.attr("src",imgSrc);
+    }
     function setPicEvent() {
         var box = $('#box');
         var target = $('<div class="target"></div>');
@@ -178,9 +198,8 @@ $(function(){
             });
             target.css({
                 backgroundPosition : -hx * be + 'px ' + (-hy * be) + 'px',
-                backgroundImage :"url('img/pro_center01.png')"
-            })
-
+                backgroundImage: 'url("' + imgSrc + '")'
+            });
         }).hover(function (e) {
             var _vm = $(this);
             top = _vm.get(0).getBoundingClientRect().top;

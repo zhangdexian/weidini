@@ -97,6 +97,9 @@
   line-height: 28px;
   text-indent: 14px;
 }
+.middle .new div:first-of-type ul li:hover {
+  border: 2px solid #ff0000;
+}
 .middle .hot {
   padding-top: 60px;
   width: 1200px;
@@ -143,6 +146,9 @@
   color: #000;
   line-height: 23px;
   text-indent: 6px;
+}
+.middle .hot div:first-of-type ul:first-of-type li:hover {
+  border: 2px solid #ff0000;
 }
 .middle .recommend {
   width: 1200px;
@@ -209,6 +215,9 @@
   color: #000;
   line-height: 24px;
   font-weight: normal;
+}
+.middle .recommend ul:first-of-type li:hover {
+  border: 2px solid #ff0000;
 }
 .middle .high_rec {
   width: 1200px;
@@ -283,6 +292,9 @@
   line-height: 32px;
   vertical-align: text-top;
 }
+.middle .high_rec ul:first-of-type li:hover {
+  border: 2px solid #ff0000;
+}
 .middle .high_rec ul:last-child {
   padding: 0 20px 20px 20px;
   background-color: #fff;
@@ -321,6 +333,9 @@
   background-color: #ff0101;
   text-align: center;
   line-height: 22px;
+}
+.middle .high_rec ul:last-child li:hover {
+  border: 2px solid #ff0000;
 }
 /*banner*/
 .banner {

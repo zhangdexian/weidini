@@ -237,6 +237,7 @@
           border: none;
           outline: none;
           text-indent: 14px;
+          background: transparent;
         }
         button{
           width: 48px;
@@ -260,13 +261,9 @@
     li{
       float: left;
       padding-bottom: 20px;
+      border: 2px solid #dcdcdc;
+      margin: 0 6px;
       margin-bottom: 40px;
-      border: 1px solid #dcdcdc;
-      margin-right: 20px;
-      &:nth-child(4n){
-        margin-right: 0;
-        float: right;
-      }
       a img{
         width: 273px;
         height: 250px;
@@ -317,6 +314,9 @@
           margin-left: 6px;
         }
       }
+      &:hover{
+        border: 2px solid #ff0000;
+      }
     }
   }
   .page_transition{
@@ -358,6 +358,9 @@
         background-color: #c9c9c9;
         padding: 0;
         border-radius: 6px;
+      }
+      &:hover:not(.prev){
+        background-color: #c9c9c9;
       }
     }
     span{

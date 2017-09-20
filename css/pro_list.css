@@ -242,6 +242,7 @@
   border: none;
   outline: none;
   text-indent: 14px;
+  background: transparent;
 }
 .middle form input[type=checkbox] + div button {
   width: 48px;
@@ -262,13 +263,9 @@
 .middle ul.pro_list li {
   float: left;
   padding-bottom: 20px;
+  border: 2px solid #dcdcdc;
+  margin: 0 6px;
   margin-bottom: 40px;
-  border: 1px solid #dcdcdc;
-  margin-right: 20px;
-}
-.middle ul.pro_list li:nth-child(4n) {
-  margin-right: 0;
-  float: right;
 }
 .middle ul.pro_list li a img {
   width: 273px;
@@ -318,6 +315,9 @@
   line-height: 16px;
   margin-left: 6px;
 }
+.middle ul.pro_list li:hover {
+  border: 2px solid #ff0000;
+}
 .middle .page_transition {
   width: 1160px;
   padding: 0 20px;
@@ -360,6 +360,9 @@
   background-color: #c9c9c9;
   padding: 0;
   border-radius: 6px;
+}
+.middle .page_transition a:hover:not(.prev) {
+  background-color: #c9c9c9;
 }
 .middle .page_transition span {
   font-size: 16px;

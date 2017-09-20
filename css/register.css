@@ -64,14 +64,18 @@
   font-family: 微软雅黑;
 }
 .middle form div input {
-  width: 400px;
+  width: 426px;
   height: 74px;
   font-size: 20px;
   line-height: 78px;
   outline: none;
   border: none;
 }
-.middle form input[type=submit] {
+.middle form div b {
+  font-size: 14px;
+  color: #ff0000;
+}
+.middle form button {
   width: 580px;
   height: 80px;
   font-size: 30px;

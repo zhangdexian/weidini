@@ -9,14 +9,18 @@ $(function(){
     var flag = 0;
     var min_price = $(".min_price input");
     var max_price = $(".max_price input");
+    var pro_item = $(".pro_list li");
+    var inputKeyword = $("#inputKeyword");
+    var searchKeyword = $("#searchKeyword");
+
+
 
 
     brandSelect();
     materialSelect();
     selectShutDown();
     selectMoreSwitch();
-    priceMinSelect();
-    priceMaxSelect();
+    priceSelect();
 
 
     (function(){
@@ -31,9 +35,7 @@ $(function(){
         }
         cart_num.text(cartNum);
     })();
-
-
-
+    /*选择品牌*/
     function brandSelect(){
         brand.click(function(){
             var _brand = $(this).text();
@@ -46,7 +48,7 @@ $(function(){
             }
         })
     }
-
+    /*选择材质*/
     function materialSelect(){
         material.click(function(){
             var _material = $(this).text();
@@ -61,14 +63,14 @@ $(function(){
         })
     }
 
-/*关闭按钮*/
+    /*关闭按钮*/
     function selectShutDown(){
         shut_down.click(function(){
             $(this).parent().css("display","none");
         })
     }
 
-/*多选*/
+    /*多选*/
     function selectMoreSwitch(){
         select_more.eq(0).click(function(){
             if(flag == 0){
@@ -93,17 +95,82 @@ $(function(){
     }
 
     /*价格筛选*/
-    function priceMinSelect(){
-        min_price.focus(function(){
-                $(this).select();
-        });
-        min_price.blur(function(){
-            var minprice = Number(min_price.val());
-        })
-    }
-    function  priceMaxSelect(){
+    function priceSelect() {
+        var minprice;
+        var maxprice;
+        var price = $(".price");
 
+        priceMinSelect();
+        priceMaxSelect();
+
+        function priceMinSelect() {
+            min_price.blur(function () {
+                minprice = Number(min_price.val());
+                maxprice = Number(max_price.val());
+                price.each(function (i) {
+                    var _price = parseInt(price.eq(i).text().replace("￥", ""));
+                    if (!maxprice) {
+                        if (minprice > 0) {
+                            if (_price < minprice) {
+                                $(this).parent().css("display", "none");
+                            } else {
+                                $(this).parent().css("display", "block");
+                            }
+                        } else {
+                            return false;
+                        }
+                    } else if (maxprice > minprice) {
+                        if (_price > minprice && _price < maxprice) {
+                            $(this).parent().css("display", "block");
+                        } else {
+                            $(this).parent().css("display", "none");
+                        }
+                    } else {
+                        return false;
+                    }
+
+                })
+            });
+        }
+        function priceMaxSelect() {
+            max_price.blur(function () {
+                minprice = Number(min_price.val());
+                maxprice = Number(max_price.val());
+                price.each(function (i) {
+                    var _price = parseInt(price.eq(i).text().replace("￥", ""));
+                    if (!minprice) {
+                        if (maxprice > 0) {
+                            if (_price > maxprice) {
+                                $(this).parent().css("display", "none");
+                            } else {
+                                $(this).parent().css("display", "block");
+                            }
+                        } else {
+                            return false;
+                        }
+                    } else if (minprice < 0) {
+                        return false
+                    } else {
+                        if (minprice < maxprice) {
+                            if (_price < maxprice && _price > minprice) {
+                                $(this).parent().css("display", "block");
+                            } else {
+                                $(this).parent().css("display", "none");
+                            }
+                        } else {
+                            return false
+                        }
+
+                    }
+                });
+            });
+        }
     }
+
+    /*存储需要拿到pro_center内的数据*/
+
+
+    /*关键字搜索*/
 
 
 });

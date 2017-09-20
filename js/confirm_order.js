@@ -8,12 +8,15 @@ $(function(){
     var discount = $(".discount");
     var pay = $(".pay");
     var submit = $("[type=submit]");
+    var receipt_checkbox = $(".receipt input[type=checkbox]");
+    var receipt_radio = $(".receipt input[type=radio]");
 
 
 
     chooseAddress();
     calTotal();
     setSubmitEvent();
+    receiptChoose();
 
 
     (function(){
@@ -95,10 +98,16 @@ $(function(){
         }
     }
 
-
-
-
-
+    /*选择开具发票的方式*/
+    function receiptChoose() {
+        receipt_checkbox.click(function () {
+            if (!receipt_checkbox.prop("checked")) {
+                receipt_radio.attr("disabled", "disabled");
+            }else{
+                receipt_radio.removeAttr("disabled");
+            }
+        });
+    }
 
 
 });

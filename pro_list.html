@@ -6,7 +6,7 @@
     <meta name="description" content="#"/><!--网页描述-->
     <meta name="author" content="多迪"/><!--作者-->
     <link rel="shrotcut icon" href="logo.ico"><!--网页标题的图标-->
-    <title>产品详情</title>
+    <title>产品中心</title>
     <base target="_self"><!--覆盖当前页-->
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/pro_list.css">
@@ -33,17 +33,18 @@
             <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
             <div class="search">
                 <form>
-                    <input type="text" placeholder="请输入品牌或商品名称" class="myplace"><button>搜索</button>
+                    <input type="text" placeholder="请输入品牌或商品名称" class="myplace" maxlength="50"><button>搜索</button>
                 </form>
                 <div class="brand_select">
                     <ul>
-                        <li>箭牌</li>
-                        <li>摩恩</li>
-                        <li>法恩莎卫浴</li>
-                        <li>美标</li>
-                        <li>白色恋人</li>
+                        <li><a href="javascript:;">箭牌</a></li>
+                        <li><a href="javascript:;">摩恩</a></li>
+                        <li><a href="javascript:;">法恩莎卫浴</a></li>
+                        <li><a href="javascript:;">美标</a></li>
+                        <li><a href="javascript:;">白色恋人</a></li>
                     </ul>
                 </div>
+
             </div>
             <div class="cart">
                 <a href="shop_cart.html"><img src="img/cart.png" alt=""></a>
@@ -179,12 +180,44 @@
         <input type="checkbox">货到付款
         <input type="checkbox">仅显示有货
         <input type="checkbox">可配送全国
-        <div><input type="text" placeholder="在结果中搜索" class="myplace"><button>确定</button></div>
+        <div><input type="text" placeholder="在结果中搜索" class="myplace" maxlength="16" id="inputKeyword"><button id="searchKeyword">确定</button></div>
     </form>
     <ul class="pro_list">
         <li>
             <a href="pro_center.html"><img src="img/pro_list05.png" alt=""></a>
-            <p>￥1788.00</p>
+            <p class="price">￥1788.00</p>
+            <p><a href="pro_center.html">白色恋人浴室柜组合洗脸盆柜组合洗手盆</a></p>
+            <p><a href="pro_center.html">洗漱台洗手台 定制一体盆款 详询客服 梦</a></p>
+            <p>已有<span>200+</span>条评价</p>
+            <p><span>满减</span><span>险</span></p>
+        </li>
+        <li>
+            <a href="pro_center.html"><img src="img/pro_list06.png" alt=""></a>
+            <p class="price">￥1598.00</p>
+            <p><a href="pro_center.html">四季沐歌浴室柜组合套装PVC浴柜 面盆</a></p>
+            <p><a href="pro_center.html">储物柜 洗漱台吊柜 洗脸台柜组合 </a></p>
+            <p>已有<span>200+</span>条评价</p>
+            <p><span>满减</span><span>险</span></p>
+        </li>
+        <li>
+            <a href="pro_center.html"><img src="img/pro_list07.png" alt=""></a>
+            <p class="price">￥3289.00</p>
+            <p><a href="pro_center.html">瑞士希箭HOROW 实木浴室柜浴室镜组合</a></p>
+            <p><a href="pro_center.html">卫浴柜洗手洗脸洗漱台盆套装 白色120CM </a></p>
+            <p>已有<span>200+</span>条评价</p>
+            <p><span>满减</span><span>险</span></p>
+        </li>
+        <li>
+            <a href="pro_center.html"><img src="img/pro_list08.png" alt=""></a>
+            <p class="price">￥2399.00</p>
+            <p><a href="pro_center.html">JOMOO九牧卫浴 PVC/实木浴室柜组合 </a></p>
+            <p><a href="pro_center.html">洗脸盆洗漱台洗手池A2182/多套可选</a></p>
+            <p>已有<span>200+</span>条评价</p>
+            <p><span>满减</span><span>险</span></p>
+        </li>
+        <li>
+            <a href="pro_center.html"><img src="img/pro_list05.png" alt=""></a>
+            <p class="price">￥1788.00</p>
             <p><a href="pro_center.html">白色恋人浴室柜组合洗脸盆柜组合洗手盆</a></p>
             <p><a href="pro_center.html">洗漱台洗手台 定制一体盆款 详询客服 梦</a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -192,7 +225,7 @@
         </li>
         <li>
             <a href="javascript:;"><img src="img/pro_list06.png" alt=""></a>
-            <p>￥1598.00</p>
+            <p class="price">￥1598.00</p>
             <p><a href="###">四季沐歌浴室柜组合套装PVC浴柜 面盆</a></p>
             <p><a href="###">储物柜 洗漱台吊柜 洗脸台柜组合 </a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -200,7 +233,7 @@
         </li>
         <li>
             <a href="javascript:;"><img src="img/pro_list07.png" alt=""></a>
-            <p>￥3289.00</p>
+            <p class="price">￥3289.00</p>
             <p><a href="###">瑞士希箭HOROW 实木浴室柜浴室镜组合</a></p>
             <p><a href="###">卫浴柜洗手洗脸洗漱台盆套装 白色120CM </a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -208,7 +241,7 @@
         </li>
         <li>
             <a href="javascript:;"><img src="img/pro_list08.png" alt=""></a>
-            <p>￥2399.00</p>
+            <p class="price">￥2399.00</p>
             <p><a href="###">JOMOO九牧卫浴 PVC/实木浴室柜组合 </a></p>
             <p><a href="###">洗脸盆洗漱台洗手池A2182/多套可选</a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -216,7 +249,7 @@
         </li>
         <li>
             <a href="pro_center.html"><img src="img/pro_list05.png" alt=""></a>
-            <p>￥1788.00</p>
+            <p class="price">￥1788.00</p>
             <p><a href="pro_center.html">白色恋人浴室柜组合洗脸盆柜组合洗手盆</a></p>
             <p><a href="pro_center.html">洗漱台洗手台 定制一体盆款 详询客服 梦</a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -224,7 +257,7 @@
         </li>
         <li>
             <a href="javascript:;"><img src="img/pro_list06.png" alt=""></a>
-            <p>￥1598.00</p>
+            <p class="price">￥1598.00</p>
             <p><a href="###">四季沐歌浴室柜组合套装PVC浴柜 面盆</a></p>
             <p><a href="###">储物柜 洗漱台吊柜 洗脸台柜组合 </a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -232,7 +265,7 @@
         </li>
         <li>
             <a href="javascript:;"><img src="img/pro_list07.png" alt=""></a>
-            <p>￥3289.00</p>
+            <p class="price">￥3289.00</p>
             <p><a href="###">瑞士希箭HOROW 实木浴室柜浴室镜组合</a></p>
             <p><a href="###">卫浴柜洗手洗脸洗漱台盆套装 白色120CM </a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -240,39 +273,7 @@
         </li>
         <li>
             <a href="javascript:;"><img src="img/pro_list08.png" alt=""></a>
-            <p>￥2399.00</p>
-            <p><a href="###">JOMOO九牧卫浴 PVC/实木浴室柜组合 </a></p>
-            <p><a href="###">洗脸盆洗漱台洗手池A2182/多套可选</a></p>
-            <p>已有<span>200+</span>条评价</p>
-            <p><span>满减</span><span>险</span></p>
-        </li>
-        <li>
-            <a href="pro_center.html"><img src="img/pro_list05.png" alt=""></a>
-            <p>￥1788.00</p>
-            <p><a href="pro_center.html">白色恋人浴室柜组合洗脸盆柜组合洗手盆</a></p>
-            <p><a href="pro_center.html">洗漱台洗手台 定制一体盆款 详询客服 梦</a></p>
-            <p>已有<span>200+</span>条评价</p>
-            <p><span>满减</span><span>险</span></p>
-        </li>
-        <li>
-            <a href="javascript:;"><img src="img/pro_list06.png" alt=""></a>
-            <p>￥1598.00</p>
-            <p><a href="###">四季沐歌浴室柜组合套装PVC浴柜 面盆</a></p>
-            <p><a href="###">储物柜 洗漱台吊柜 洗脸台柜组合 </a></p>
-            <p>已有<span>200+</span>条评价</p>
-            <p><span>满减</span><span>险</span></p>
-        </li>
-        <li>
-            <a href="javascript:;"><img src="img/pro_list07.png" alt=""></a>
-            <p>￥3289.00</p>
-            <p><a href="###">瑞士希箭HOROW 实木浴室柜浴室镜组合</a></p>
-            <p><a href="###">卫浴柜洗手洗脸洗漱台盆套装 白色120CM </a></p>
-            <p>已有<span>200+</span>条评价</p>
-            <p><span>满减</span><span>险</span></p>
-        </li>
-        <li>
-            <a href="javascript:;"><img src="img/pro_list08.png" alt=""></a>
-            <p>￥2399.00</p>
+            <p class="price">￥2399.00</p>
             <p><a href="###">JOMOO九牧卫浴 PVC/实木浴室柜组合 </a></p>
             <p><a href="###">洗脸盆洗漱台洗手池A2182/多套可选</a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -280,7 +281,7 @@
         </li>
         <li>
             <a href="javascript:;"><img src="img/pro_list05.png" alt=""></a>
-            <p>￥1788.00</p>
+            <p class="price">￥1788.00</p>
             <p><a href="###">白色恋人浴室柜组合洗脸盆柜组合洗手盆</a></p>
             <p><a href="###">洗漱台洗手台 定制一体盆款 详询客服 梦</a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -288,7 +289,7 @@
         </li>
         <li>
             <a href="javascript:;"><img src="img/pro_list06.png" alt=""></a>
-            <p>￥1598.00</p>
+            <p class="price">￥1598.00</p>
             <p><a href="###">四季沐歌浴室柜组合套装PVC浴柜 面盆</a></p>
             <p><a href="###">储物柜 洗漱台吊柜 洗脸台柜组合 </a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -296,7 +297,7 @@
         </li>
         <li>
             <a href="javascript:;"><img src="img/pro_list07.png" alt=""></a>
-            <p>￥3289.00</p>
+            <p class="price">￥3289.00</p>
             <p><a href="###">瑞士希箭HOROW 实木浴室柜浴室镜组合</a></p>
             <p><a href="###">卫浴柜洗手洗脸洗漱台盆套装 白色120CM </a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -304,7 +305,7 @@
         </li>
         <li>
             <a href="javascript:;"><img src="img/pro_list08.png" alt=""></a>
-            <p>￥2399.00</p>
+            <p class="price">￥2399.00</p>
             <p><a href="###">JOMOO九牧卫浴 PVC/实木浴室柜组合 </a></p>
             <p><a href="###">洗脸盆洗漱台洗手池A2182/多套可选</a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -312,7 +313,7 @@
         </li>
         <li>
             <a href="javascript:;"><img src="img/pro_list05.png" alt=""></a>
-            <p>￥1788.00</p>
+            <p class="price">￥1788.00</p>
             <p><a href="###">白色恋人浴室柜组合洗脸盆柜组合洗手盆</a></p>
             <p><a href="###">洗漱台洗手台 定制一体盆款 详询客服 梦</a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -320,7 +321,7 @@
         </li>
         <li>
             <a href="javascript:;"><img src="img/pro_list06.png" alt=""></a>
-            <p>￥1598.00</p>
+            <p class="price">￥1598.00</p>
             <p><a href="###">四季沐歌浴室柜组合套装PVC浴柜 面盆</a></p>
             <p><a href="###">储物柜 洗漱台吊柜 洗脸台柜组合 </a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -328,7 +329,7 @@
         </li>
         <li>
             <a href="javascript:;"><img src="img/pro_list07.png" alt=""></a>
-            <p>￥3289.00</p>
+            <p class="price">￥3289.00</p>
             <p><a href="###">瑞士希箭HOROW 实木浴室柜浴室镜组合</a></p>
             <p><a href="###">卫浴柜洗手洗脸洗漱台盆套装 白色120CM </a></p>
             <p>已有<span>200+</span>条评价</p>
@@ -336,7 +337,7 @@
         </li>
         <li>
             <a href="javascript:;"><img src="img/pro_list08.png" alt=""></a>
-            <p>￥2399.00</p>
+            <p class="price">￥2399.00</p>
             <p><a href="###">JOMOO九牧卫浴 PVC/实木浴室柜组合 </a></p>
             <p><a href="###">洗脸盆洗漱台洗手池A2182/多套可选</a></p>
             <p>已有<span>200+</span>条评价</p>

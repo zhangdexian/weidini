@@ -68,7 +68,7 @@
   margin-top: 14px;
 }
 .header .main_nav .nav_bar .search form input {
-  width: 398px;
+  width: 392px;
   height: 53px;
   border: 1px solid #6d2f16;
   vertical-align: top;
@@ -77,7 +77,7 @@
   color: #a6a6a6;
   line-height: 52px;
   outline: none;
-  padding-left: 2px;
+  padding: 0 4px;
 }
 .header .main_nav .nav_bar .search form button {
   width: 98px;
@@ -96,13 +96,13 @@
   margin-top: 18px;
   overflow: hidden;
   padding-left: 6px;
-  font-family: 黑体;
-  font-size: 16px;
-  color: #505050;
 }
-.header .main_nav .nav_bar .search .brand_select ul li {
+.header .main_nav .nav_bar .search .brand_select ul li a {
   float: left;
   margin-right: 24px;
+  color: #505050;
+  font-size: 16px;
+  font-family: 黑体;
 }
 .header .main_nav .nav_bar .cart {
   margin-top: 15px;
@@ -223,12 +223,16 @@
 .header .main_nav .nav li {
   float: left;
   padding: 0 40px;
+  border: 1px solid transparent;
 }
 .header .main_nav .nav li a {
   font-size: 16px;
   font-family: 微软雅黑;
   color: #000000;
   line-height: 40px;
+}
+.header .main_nav .nav li:hover {
+  border: 1px solid #000;
 }
 .footer {
   background-color: #f0f0f0;

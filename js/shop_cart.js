@@ -10,6 +10,7 @@ $(function(){
     var check = $(".check");
     var num = $(".num");
     var balance = $(".balance");
+    var deleteItemNum = 0;
 
     (function(){
         var cart_num = $(".cart_num");
@@ -81,6 +82,7 @@ $(function(){
     function checkItemChange(){
         checkItem.change(function(){
             var flag = 0;
+            var num = 0;
             init();
             if($(this).prop("checked")){
                 flag = 1
@@ -88,8 +90,18 @@ $(function(){
                 flag = 0;
             }
             var index = checkItem.index(this);
-
             check.eq(index).prop("checked",flag);
+
+            for(var i = 0, l = checkItem.length; i < l ; i ++){
+                if(checkItem.eq(i).prop("checked")){
+                    num++;
+                }
+            }
+            if(num == l){
+                checkAll.prop("checked",true);
+            }else{
+                checkAll.prop("checked",false);
+            }
         });
 
     }
@@ -115,9 +127,12 @@ $(function(){
     /*删除选中的商品*/
     function deleteItemSelected(){
         deleteItem.click(function(){
+            var orderList = order.find("table");
             for(var i = 0, l = orderList.length ; i < l ;i ++){
                 if(checkItem.eq(i).prop('checked')){
                     orderList.eq(i).remove();
+                    var id = orderList.eq(i).attr("data-key");
+                    localStorage.removeItem('shop_cart' + id);
                 }
             }
             init();
@@ -128,11 +143,15 @@ $(function(){
 
    /*删除*/
     function removeItem(){
-        remove.click(function(){
-            var orderList = $("#orderList table");
-            var index = remove.index(this);
-            orderList.eq(index).remove();
-            init();
+        var orderList = $("#orderList table");
+        orderList.each(function (i){
+            var _vm = $(this);
+            var id = _vm.attr('data-key');
+            _vm.find('.remove').click(function () {
+                $(this).parents("table").remove();
+                localStorage.removeItem('shop_cart' + id);
+                init();
+            })
         });
     }
 
@@ -176,24 +195,39 @@ $(function(){
                 }
             }
             if(num > 0){
-                alert("所有商品已加入到购物车");
-            }
                 window.open("confirm_order.html");
+            }else{
+                alert("您未选中任何商品");
+                return false;
+            }
         })
     }
 
-/*取到购物车里的数据并显示*/
+/*调用getLocalStorageById方法并使内容显示到页面*/
     function withdrawOrderItem(){
-        var key = localStorage.length;
-        var shopCartStr = "";
-        for(var i = 0; i < key ; i++){
-            if(localStorage.getItem("shop_cart"+(i+1))){
-                shopCartStr += localStorage.getItem("shop_cart"+(i+1));
+        var  shopCartStr = getLocalStorageById ('shop_cart');
+        var _shopCartStr = "";
+        for(var i in shopCartStr){
+            if(shopCartStr.hasOwnProperty(i)){
+                _shopCartStr += shopCartStr[i];
             }
         }
-        order.append(shopCartStr);
+        order.append(_shopCartStr);
     }
 
 
 
 });
+
+/*从购物车拿数据*/
+function getLocalStorageById (id) {
+    var reg = new RegExp(id);
+    var newArr = {};
+    for (var key in localStorage) {
+        if (reg.test(key)) {
+            newArr[key] = localStorage.getItem(key);
+        }
+    }
+    return newArr;
+}
+
