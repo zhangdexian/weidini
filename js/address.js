@@ -6,10 +6,16 @@ $(function() {
     var sub_tips = $(".sub_tips");
     var sub_menu = $(".sub_menu");
 
+    var receiver = $("#receiver");
+    var mobile = $("#mobile");
+    var tel = $("#tel");
+    var save = $("#save");
+
     getProv();
     provChange();
     cityChange();
     menuCollapse();
+    saveAddressButton();
 
 
     function getProv() {
@@ -49,7 +55,6 @@ $(function() {
                         _county += "<option value='" + COUNTY[i].ID + "'>" + COUNTY[i].DisName + "</option>";
                     }
                     county.html(_county);
-                    console.log(_county)
                 }
             })
     }
@@ -74,7 +79,41 @@ $(function() {
         cart_num.text(cartNum);
     })();
 
+/*新增收货地址*/
+    function saveAddressButton (){
+        var mobileRegExp = /^(13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0|(5-9)])\d{8}$/;
+        var telRegExp =   /^\d{7}$/
+        save.click(function(){
+            if(receiver.val() =="收货人姓名"){
 
+                alert("请输入收货人姓名");
+                return false;
+            }
+            if(!prov.val()){
+                alert("请选择收货地址");
+                return false;
+            }
+            if(!city.val()){
+                alert("请选择收货地址");
+                return false;
+            }
+            if(!county.val()){
+                alert("请选择收货地址");
+                return false;
+            }
+            if(!mobileRegExp.test(mobile.val())){
+                alert("请输入正确的手机号码");
+                return false;
+            }
+            if(tel.val() != "手机号/区号-固定电话"){
+                if(!telRegExp.test(tel.val()) && !mobileRegExp.test(tel.val())){
+                    alert("请输入正确的电话号码");
+                    return false;
+                }
+            }
+            alert("保存成功");
+        })
+    }
 
 });
 

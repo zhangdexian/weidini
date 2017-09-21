@@ -10,6 +10,7 @@ $(function(){
     var submit = $("[type=submit]");
     var receipt_checkbox = $(".receipt input[type=checkbox]");
     var receipt_radio = $(".receipt input[type=radio]");
+    var savereceiptinfo = $("#savereceiptinfo");
 
 
 
@@ -17,6 +18,7 @@ $(function(){
     calTotal();
     setSubmitEvent();
     receiptChoose();
+    saveReceiptButton();
 
 
     (function(){
@@ -102,11 +104,22 @@ $(function(){
     function receiptChoose() {
         receipt_checkbox.click(function () {
             if (!receipt_checkbox.prop("checked")) {
-                receipt_radio.attr("disabled", "disabled");
+
             }else{
                 receipt_radio.removeAttr("disabled");
             }
         });
+    }
+
+    function saveReceiptButton(){
+        savereceiptinfo.click(function(){
+            if (receipt_checkbox.prop("checked")) {
+                alert("发票信息已保存")
+            }else{
+                alert("请选择“开具发票”");
+                return false;
+            }
+        })
     }
 
 

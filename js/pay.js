@@ -96,7 +96,11 @@ $(function(){
     function confirmEvent(){
         confirm.click(function(){
             if(paymentSelectRadio.prop("checked")){
-                window.open("payment_success.html");
+                if(!pwdList.eq(5).val()){
+                    window.open("payment_failed.html")
+                }else{
+                    window.open("payment_success.html");
+                }
             }else{
                 alert("请选择一种支付方式！");
                 return false;

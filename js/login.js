@@ -36,7 +36,9 @@ $(function(){
                 alert("验证码输入错误");
                 identify.focus().val("");
                 showIdentifyCode();
+                return false;
             }
+            window.location = "index.html";
         });
 
     }

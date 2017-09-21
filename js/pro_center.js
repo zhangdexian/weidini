@@ -22,6 +22,8 @@ $(function(){
     var addshopcart = $(".addshopcart");
 
 
+
+
     orderSave();
     setPicEvent();
     addToShopCart();
@@ -129,6 +131,7 @@ $(function(){
     /*商品详情 评价详情 成交记录切换*/
     subMenu.click(function(){
         $(this).addClass("current").siblings().removeClass("current");
+
     });
 
     function proTebEvent(){
@@ -316,8 +319,20 @@ $(function(){
 
     /*商品详情 评价详情 成交记录切换*/
     function subMenuEvent(){
+        var prodetalis_toggle = $(".prodetalis_toggle");
+        var comment_toggle = $(".comment_toggle");
+        var pro_detalis = $("#pro_detalis");
+        var comment_details = $("#comment_details");
         subMenu.click(function(){
             $(this).addClass("current").siblings().removeClass("current");
+            if(pro_detalis.hasClass("current")){
+                prodetalis_toggle.css("display","block");
+                comment_toggle.css("display","none");
+            }
+            if(comment_details.hasClass("current")){
+                prodetalis_toggle.css("display","none");
+                comment_toggle.css("display","block");
+            }
         });
     }
 
