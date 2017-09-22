@@ -407,15 +407,17 @@
           }
         }
       }
-      .pro_toggle{
+      .tab_hot,.tab_relative{
         margin-top: 20px;
         width: 310px;
         margin-left: 20px;
         font-size: 0;
-        display: none;
         img{
           width: 309px;
           margin-bottom: 20px;
+        }
+        &.tab_relative{
+          display: none;
         }
       }
     }
@@ -423,7 +425,7 @@
       float: left;
       width: 790px;
       margin-left: 20px;
-      ul{
+      .menu{
         overflow: hidden;
         position: relative;
         cursor: pointer;
@@ -541,25 +543,25 @@
               border-right: 10px solid #fff;
             }
           }
-          &+ul{
-            overflow: hidden;
-            border: 1px solid #bfbfbf;
-            li{
-              float: left;
-              font-size: 14px;
-              color: #666666;
-              line-height: 26px;
-              padding: 0 11px;
-              &.current{
-                color: #ff0000;
-              }
-              input{
-                width: 16px;
-                height: 16px;
-                margin-right: 8px;
-                vertical-align: middle;
-                outline: none;
-              }
+        }
+        .comment_choose{
+          overflow: hidden;
+          border: 1px solid #bfbfbf;
+          li{
+            float: left;
+            font-size: 14px;
+            color: #666666;
+            line-height: 26px;
+            padding: 0 11px;
+            &.current{
+              color: #ff0000;
+            }
+            input{
+              width: 16px;
+              height: 16px;
+              margin-right: 8px;
+              vertical-align: middle;
+              outline: none;
             }
           }
         }
@@ -644,7 +646,7 @@
           a{
             font-size: 16px;
             color: #000;
-            padding: 6px;
+            padding: 10px;
             &.prev,&.next{
               padding: 0;
               display: inline-block;
@@ -662,7 +664,6 @@
             }
             &.next{
               color: #000;
-              background-color: #c9c9c9;
             }
             &:last-child{
               font-size: 16px;
@@ -672,9 +673,15 @@
               height: 32px;
               line-height: 32px;
               text-align: center;
-              background-color: #c9c9c9;
+              border: 1px solid #d7d7d7;
               padding: 0;
               border-radius: 6px;
+            }
+            &:not(.prev):not(.next):not(:last-child):hover{
+              color: #ff0000;
+            }
+            &.prev:hover,&.next:hover,&:last-child:hover{
+              background-color: #c9c9c9;;
             }
           }
           span{
@@ -696,6 +703,15 @@
             line-height: 28px;
           }
         }
+
+
+
+
+
+
+
+
+
       }
     }
   }

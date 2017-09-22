@@ -16,6 +16,7 @@ $(function() {
     cityChange();
     menuCollapse();
     saveAddressButton();
+    deleteAddress();
 
 
     function getProv() {
@@ -112,6 +113,17 @@ $(function() {
                 }
             }
             alert("保存成功");
+        })
+    }
+
+    /*删除地址*/
+
+    function deleteAddress(){
+        var delete_address = $(".delete_address");
+        var receive_address = $(".receive_address");
+        delete_address.click(function(){
+            var index = delete_address.index(this);
+            receive_address.eq(index).remove();
         })
     }
 

@@ -274,7 +274,7 @@
       font-size: 16px;
       color: #5a5a5a;
       width: 90px;
-      height: 30px;
+      height: 32px;
       line-height: 32px;
       text-align: center;
       background-color: #f3f3f3;
@@ -285,7 +285,6 @@
     }
     &.next{
       color: #000;
-      background-color: #c9c9c9;
     }
     &:last-child{
       font-size: 16px;
@@ -295,9 +294,15 @@
       height: 32px;
       line-height: 32px;
       text-align: center;
-      background-color: #c9c9c9;
+      border: 1px solid #d7d7d7;
       padding: 0;
       border-radius: 6px;
+    }
+    &:not(.prev):not(.next):not(:last-child):hover{
+      color: #ff0000;
+    }
+    &.prev:hover,&.next:hover,&:last-child:hover{
+      background-color: #c9c9c9;;
     }
   }
   span{

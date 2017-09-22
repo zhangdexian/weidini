@@ -347,7 +347,6 @@
 }
 .middle .page_transition a.next {
   color: #000;
-  background-color: #c9c9c9;
 }
 .middle .page_transition a:last-child {
   font-size: 16px;
@@ -357,11 +356,16 @@
   height: 32px;
   line-height: 32px;
   text-align: center;
-  background-color: #c9c9c9;
+  border: 1px solid #d7d7d7;
   padding: 0;
   border-radius: 6px;
 }
-.middle .page_transition a:hover:not(.prev) {
+.middle .page_transition a:not(.prev):not(.next):not(:last-child):hover {
+  color: #ff0000;
+}
+.middle .page_transition a.prev:hover,
+.middle .page_transition a.next:hover,
+.middle .page_transition a:last-child:hover {
   background-color: #c9c9c9;
 }
 .middle .page_transition span {

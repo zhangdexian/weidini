@@ -135,12 +135,27 @@ $(function(){
     });
 
     function proTebEvent(){
-        pro_toggle.eq(1).css("display","block");
-        pro_tab.click(function(){
-            $(this).addClass("current").siblings().removeClass("current");
-            var index = pro_tab.index(this);
-            pro_toggle.eq(index).show().siblings().hide();
+        var hot_goods = $(".hot_goods");
+        var relation_goods = $(".relation_goods");
+        var tab_hot = $(".tab_hot");
+        var tab_relative = $(".tab_relative");
+        hot_goods.click(function(){
+            if (!$(this).hasClass("current")){
+                $(this).addClass("current");
+                tab_relative.css("display","none");
+                tab_hot.css("display","block");
+                relation_goods.removeClass("current");
+            }
         });
+        relation_goods.click(function(){
+            if (!$(this).hasClass("current")){
+                $(this).addClass("current");
+                tab_relative.css("display","block");
+                tab_hot.css("display","none");
+                hot_goods.removeClass("current");
+            }
+        })
+
     }
 
 

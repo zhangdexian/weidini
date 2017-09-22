@@ -225,7 +225,7 @@
   border-radius: 2px;
   padding-left: 10px;
 }
-.middle > div:nth-child(2) > form:nth-child(5) > div p input.name {
+.middle > div:nth-child(2) > form:nth-child(5) > div p input.receiver {
   width: 144px;
 }
 .middle > div:nth-child(2) > form:nth-child(5) > div p input.spot {
@@ -273,7 +273,7 @@
   font-size: 16px;
   color: #5a5a5a;
   width: 90px;
-  height: 30px;
+  height: 32px;
   line-height: 32px;
   text-align: center;
   background-color: #f3f3f3;
@@ -284,7 +284,6 @@
 }
 .page_transition a.next {
   color: #000;
-  background-color: #c9c9c9;
 }
 .page_transition a:last-child {
   font-size: 16px;
@@ -294,9 +293,17 @@
   height: 32px;
   line-height: 32px;
   text-align: center;
-  background-color: #c9c9c9;
+  border: 1px solid #d7d7d7;
   padding: 0;
   border-radius: 6px;
+}
+.page_transition a:not(.prev):not(.next):not(:last-child):hover {
+  color: #ff0000;
+}
+.page_transition a.prev:hover,
+.page_transition a.next:hover,
+.page_transition a:last-child:hover {
+  background-color: #c9c9c9;
 }
 .page_transition span {
   font-size: 16px;
